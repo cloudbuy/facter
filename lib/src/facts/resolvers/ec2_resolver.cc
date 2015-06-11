@@ -106,7 +106,7 @@ namespace facter { namespace facts { namespace resolvers {
         return;
 #else
         auto virtualization = facts.get<string_value>(fact::virtualization);
-        if (!virtualization || (virtualization->value() != vm::kvm && !boost::starts_with(virtualization->value(), "xen"))) {
+        if (!virtualization || (virtualization->value() != vm::kvm && !boost::starts_with(virtualization->value(), "xen") && virtualization->value() != vm::openstack)) {
             LOG_DEBUG("EC2 facts are unavailable: not running under an EC2 instance.");
             return;
         }
