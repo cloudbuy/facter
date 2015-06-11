@@ -124,6 +124,11 @@ namespace facter { namespace facts {
         constexpr static char const* ovirt = "ovirt";
 
         /**
+         * The name for an OpenStack virtual machine.
+         */
+        constexpr static char const* openstack = "openstack";
+
+        /**
          * The name for Solaris zones
          */
         constexpr static char const* zone = "zone";
